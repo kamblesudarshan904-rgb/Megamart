@@ -1,0 +1,198 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  min-height:100vh;
+  background:#f4f8ff;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  transition: background 0.5s ease;
+}
+
+.auth-container{
+  width:360px;
+  position:relative;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card{
+  background:#f1f1f1;
+  border-radius:25px;
+  overflow:hidden;
+  box-shadow:0 20px 40px rgba(0,0,0,.15);
+  display:none;
+  transform: scale(0.95);
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.card.active{
+  display:block;
+  transform: scale(1);
+  opacity:1;
+}
+
+.card-top{
+  height:140px;
+  background:#0b84c6;
+  border-bottom-left-radius:40px;
+  border-bottom-right-radius:40px;
+  position:relative;
+  overflow:hidden;
+  transition: background 0.3s ease;
+}
+
+.card-top:hover{
+  background:#066da5;
+}
+
+.card-body{
+  background:#fff;
+  padding:30px 25px;
+  margin-top:-40px;
+  border-radius:30px;
+  text-align:center;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity:0;
+    transform: translateY(20px);
+  }
+  to{
+    opacity:1;
+    transform: translateY(0);
+  }
+}
+
+.card-body h2{
+  margin-bottom:25px;
+  font-size:20px;
+  letter-spacing:1px;
+}
+
+.input-box{
+  display:flex;
+  align-items:center;
+  background:#f2f2f2;
+  border-radius:6px;
+  padding:12px;
+  margin-bottom:15px;
+  transition: all 0.3s ease;
+}
+
+.input-box:hover{
+  background:#e0e0e0;
+}
+
+.input-box i{
+  margin-right:10px;
+  color:#555;
+}
+
+.input-box input{
+  border:none;
+  outline:none;
+  background:transparent;
+  width:100%;
+  font-size:14px;
+  transition: all 0.3s ease;
+}
+
+.input-box input:focus{
+  transform: scale(1.02);
+}
+
+.link{
+  display:block;
+  text-align:right;
+  font-size:13px;
+  color:#0b84c6;
+  margin-bottom:20px;
+  cursor:pointer;
+  transition: color 0.3s ease;
+}
+
+.link:hover{
+  color:#066da5;
+}
+
+.btn{
+  width:100%;
+  padding:12px;
+  border:none;
+  border-radius:25px;
+  background:#0b84c6;
+  color:#fff;
+  font-weight:600;
+  cursor:pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover{
+  background:#066da5;
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.switch-text{
+  margin-top:20px;
+  font-size:14px;
+}
+
+.switch-text span{
+  color:#0b84c6;
+  font-weight:600;
+  cursor:pointer;
+  transition: all 0.3s ease;
+}
+
+.switch-text span:hover{
+  color:#066da5;
+  text-decoration: underline;
+  transform: scale(1.05);
+}
+
+/* ================= ADMIN LOGIN BUTTON ================= */
+
+.admin-btn{
+  margin-top:12px;
+  width:100%;
+  padding:12px;
+  border-radius:25px;
+  border:2px solid #ff3b3b;
+  background:transparent;
+  color:#ff3b3b;
+  font-size:14px;
+  font-weight:600;
+  cursor:pointer;
+  transition:all 0.3s ease;
+}
+
+.admin-btn i{
+  margin-right:6px;
+}
+
+.admin-btn:hover{
+  background:#ff3b3b;
+  color:#fff;
+  transform:scale(1.05);
+  box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}

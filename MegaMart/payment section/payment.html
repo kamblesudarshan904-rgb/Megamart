@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Summary</title>
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ================= LEFT : BILLING ================= -->
+    <div class="left">
+
+        <h2>Order Summary</h2>
+
+        <div class="steps">
+            <span>① Account</span>
+            <span class="active">② Shipping</span>
+            <span>③ Summary</span>
+        </div>
+
+        <h3>Billing Information</h3>
+
+        <form id="payment-form">
+            <div class="grid-2">
+                <input type="text" placeholder="First Name" required>
+                <input type="text" placeholder="Last Name" required>
+            </div>
+
+            <div class="grid-2">
+                <input type="text" placeholder="Email Address" required>
+                <input type="text" placeholder="Phone Number" required>
+            </div>
+
+            <div class="grid-2">
+                <input type="text" placeholder="Address 1" required>
+                <input type="text" placeholder="Address 2">
+            </div>
+
+            <button type="submit">Confirm Payment</button>
+        </form>
+    </div>
+
+    <!-- ================= RIGHT : SUMMARY ================= -->
+    <div class="right">
+
+        <div class="summary-box">
+            <div class="row">
+                <span>Product Price</span>
+                <strong id="product-price">₹0.00</strong>
+            </div>
+
+            <div class="row">
+                <span>Shipping Charge</span>
+                <strong id="shipping">₹0.00</strong>
+            </div>
+
+            <div class="row">
+                <span>Coupon Code</span>
+                <strong class="discount">#APPLIED</strong>
+            </div>
+
+            <hr>
+
+            <div class="row total">
+                <strong>Total</strong>
+                <strong id="total">₹0.00</strong>
+            </div>
+        </div>
+
+        <div id="summary-items" class="summary-items"></div>
+    </div>
+
+</div>
+
+<!-- ================= RAZORPAY SDK ================= -->
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+<!-- ================= YOUR JS ================= -->
+<script src="payment.js" defer></script>
+
+</body>
+</html>

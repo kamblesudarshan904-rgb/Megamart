@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login / Signup</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="login.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="auth-container">
+
+  <div class="card active" id="loginCard">
+    <div class="card-top"></div>
+    <div class="card-body">
+      <h2>SIGN IN</h2>
+
+      <div class="input-box">
+        <i class="fa fa-user"></i>
+        <input type="text" id="loginUser" placeholder="Username">
+      </div>
+
+      <div class="input-box">
+        <i class="fa fa-lock"></i>
+        <input type="password" id="loginPass" placeholder="Password">
+      </div>
+
+      <a class="link">Forget Password?</a>
+
+      <button class="btn" id="loginBtn">LOG IN</button>
+
+      <button class="admin-btn" onclick="goToAdminLogin()">
+        <i class="fa fa-user-shield"></i> ADMIN LOGIN
+      </button>
+
+      <p class="switch-text">
+        Don’t have an account?
+        <span onclick="showSignup()">SIGN UP</span>
+      </p>
+    </div>
+  </div>
+
+  <div class="card" id="signupCard">
+    <div class="card-top"></div>
+    <div class="card-body">
+      <h2>SIGN UP</h2>
+
+      <div class="input-box">
+        <i class="fa fa-id-card"></i>
+        <input type="text" id="regFullName" placeholder="Full Name (e.g. John Doe)">
+      </div>
+
+      <div class="input-box">
+        <i class="fa fa-user"></i>
+        <input type="text" id="regUser" placeholder="Username (Unique ID)">
+      </div>
+
+      <div class="input-box">
+        <i class="fa fa-envelope"></i>
+        <input type="email" id="regEmail" placeholder="Mail Id">
+      </div>
+
+      <div class="input-box">
+        <i class="fa fa-phone"></i>
+        <input type="text" id="regMobile" placeholder="Mobile Number">
+      </div>
+
+      <div class="input-box">
+        <i class="fa fa-lock"></i>
+        <input type="password" id="regPass" placeholder="Password">
+      </div>
+
+      <button class="btn" id="signupBtn">SIGN UP</button>
+
+      <p class="switch-text">
+        Already have an account?
+        <span onclick="showLogin()">SIGN IN</span>
+      </p>
+    </div>
+  </div>
+
+</div>
+
+<script src="login.js"></script>
+</body>
+</html>

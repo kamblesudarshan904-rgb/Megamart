@@ -1,0 +1,1754 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Shopping Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // If the userLogged flag is not "true", kick them back to login.html
+        if (localStorage.getItem("userLogged") !== "true") {
+            window.location.href = "login.html";
+        }
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar flex container">
+            <h2 class="site-name">Mega<span>Mart</span></h2>
+
+            <ul class="navlist flex">
+                <li><a href="#" class="link icon-active">home</a></li>
+                <li><a href="#" class="link">Shop</a></li>
+                <li><a href="#" class="link">Blog</a></li>
+                <li><a href="#" class="link">Contact</a></li>
+            </ul>
+
+            <div class="nav-icons flex">
+                <a href="#" class="icon" id="search-icon"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href="login.html" class="icon"><i class="fa-solid fa-user"></i></a>
+                <a href="add to cart/cart.html" class="icon icon-active"><i class="fa-solid fa-shopping-bag"></i></a>
+            </div>
+
+            <a href="#" class="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </a>
+
+            <div class="search-box">
+                <input type="search" placeholder="Type to search...">
+                <i class="fa-solid fa-xmark close-search"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero flex">
+            <div class="hero-content flex container">
+                <div>
+                    <h3>Summer Fashion </h3>
+                    <h1>New Collection</h1>
+                    <h4>Big Sale of This Week Up To <span>30%</span></h4>
+                    <button>Shop Now</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section class="section">
+        <div class="category-container container">
+            <div class="category">
+                <img src="images/for men.jpg">
+                <button>For Mens</button>
+            </div>
+            <div class="category">
+                <img src="images/for kids.jpg">
+                <button>For kids</button>
+            </div>
+            <div class="category">
+                <img src="images/for accessories.jpg">
+                <button>Accessories</button>
+            </div>
+            <div class="category">
+                <img src="images/for women.jpg">
+                <button>For Women</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2>New Product</h2>
+            <div class="line"></div>
+
+            <div class="card-container flex wrap">
+                <div class="card">
+                    <div class="new"></div>
+                    <img src="images/card-image1.jpg">
+                    <div class="card-content">
+                        <p class="title">Spark Shoes</p>
+                        <div class="price">
+                            <span class="amount">₹100.00</span>
+                        </div>
+                        <button class="add-to-cart">Add To Cart</button>
+                    </div>
+                </div>
+
+                <div class="card Sale">
+                    <div class="sale"></div>
+                    <img src="images/card-image2.jpg">
+                    <div class="card-content">
+                        <p class="title">Leather Black Handbag Special Edition</p>
+                        <div>
+                            <del>₹150.00</del>
+                            <span class="amount">₹100.00</span>
+                        </div>
+                        <button class="add-to-cart">Add To Cart</button>
+                    </div>
+                </div>
+
+                <div class="card New">
+                    <div class="new"></div>
+                    <img src="images/card-image3.jpg">
+                    <div class="card-content">
+                        <p class="title">Style Jacket</p>
+                        <div>
+                            <span class="amount">₹100.00</span>
+                        </div>
+                        <button class="add-to-cart">Add To Cart</button>
+                    </div>
+                </div>
+
+                <div class="card New">
+                    <div class="new"></div>
+                    <img src="images/card-image4.jpg">
+                    <div class="card-content">
+                        <p class="title">Formal Coat</p>
+                        <div class="price">
+                            <span class="amount">₹100.00</span>
+                        </div>
+                        <button class="add-to-cart">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    </section>
+
+        </section>
+
+    <!-- ===== ADMIN ADDED PRODUCTS START ===== -->
+    <section class="section products">
+        <div class="container">
+            <h2>Admin Added Products</h2>
+            <div class="line"></div>
+
+            <div id="productContainer" class="card-container flex wrap">
+                <!-- Products from admin.html will appear here -->
+            </div>
+        </div>
+    </section>
+    <!-- ===== ADMIN ADDED PRODUCTS END ===== -->
+
+    <section class="section">
+        <div class="sale-container">
+            <h3>New Trend 2026</h3>
+            <h1>Women's Collection</h1>
+            <button>shop now</button>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2>Best Sale</h2>
+            <div class="line"></div>
+            <div class="card-container flex wrap">
+                <div class="card">
+                    <div class="new"></div>
+                    <img src="images/card-image5.jpg">
+                    <div class="card-content">
+                        <p class="title">College Black Bag</p>
+                        <div class="price">
+                            <span class="amount">₹199.00</span>
+                        </div>
+                        <button class="add-to-cart">Add To Cart</button>
+                    </div>
+                </div>
+                <div class="card Sale">
+                    <div class="new"></div>
+                    <img src="images/card-image6.jpg">
+                    <div class="card-content">
+                        <p class="title">Amberella</p>
+                        <div>
+                            <del>₹159.00</del>
+                            <span class="amount">₹89.00</span>
+                        </div>
+                        <button class="add-to-cart">Add To Cart</button>
+                    </div>
+                </div>
+                <div class="card New">
+                    <div class="new"></div>
+                    <img src="images/card-image7.jpg">
+                    <div class="card-content">
+                        <p class="title">Bracelet</p>
+                        <div>
+                            <span class="amount">₹99.00</span>
+                        </div>
+                        <button class="add-to-cart">Add To Cart</button>
+                    </div>
+                </div>
+                <div class="card New">
+                    <div class="new"></div>
+                    <img src="images/card-image8.jpg">
+                    <div class="card-content">
+                        <p class="title">Shirt Hook</p>
+                        <div class="price">
+                            <span class="amount">₹299.00</span>
+                        </div>
+                        <button class="add-to-cart">Add To Cart</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="new"></div>
+                    <img src="images/card-image9.jpg">
+                    <div class="card-content">
+                        <p class="title">Formal Shoes</p>
+                        <div class="price">
+                            <span class="amount">₹450.00</span>
+                        </div>
+                        <button class="add-to-cart">Add To Cart</button>
+                    </div>
+                </div>
+                <div class="card Sale">
+                    <div class="sale"></div>
+                    <img src="images/card-image10.jpg">
+                    <div class="card-content">
+                        <p class="title">Office Bag</p>
+                        <div>
+                            <del>₹250.00</del>
+                            <span class="amount">₹200.00</span>
+                        </div>
+                        <button class="add-to-cart">Add To Cart</button>
+                    </div>
+                </div>
+                <div class="card New">
+                    <div class="new"></div>
+                    <img src="images/card-image11.jpg">
+                    <div class="card-content">
+                        <p class="title">Laptop Bag</p>
+                        <div>
+                            <span class="amount">₹399.00</span>
+                        </div>
+                        <button class="add-to-cart">Add To Cart</button>
+                    </div>
+                </div>
+                 <div class="card New">
+            <div class="new"></div>
+            <img src="images/gym20.webp">
+            <div class="card-content">
+                <p class="title"> white compressor with shorts </p>
+                <div>
+                    <span class="amount">₹599.00</span>
+                </div>
+                <button class="add-to-cart">Add To Cart</button>
+            </div>
+        </div>
+                <div class="card New">
+                    <div class="new"></div>
+                    <img src="images/card-image12.jpg">
+                    <div class="card-content">
+                        <p class="title">Danial Shirt</p>
+                        <div class="price">
+                            <span class="amount">₹100.00</span>
+                        </div>
+                        <button class="add-to-cart">Add To Cart</button>
+                    </div>
+                </div>
+                 <div class="card New">
+            <div class=""></div>
+            <img src="images/gym01.webp">
+            <div class="card-content">
+                <p class="title">Beserk Compressor</p>
+                <div>
+                    <span class="amount">₹299.00</span>
+                </div>
+                <button class="add-to-cart">Add To Cart</button>
+            </div>
+        </div>
+         <div class="card New">
+            <div class="new"></div>
+            <img src="images/gym02.webp">
+            <div class="card-content">
+                <p class="title"> Beserk fullslip compressor</p>
+                <div>
+                    <span class="amount">₹399.00</span>
+                </div>
+                <button class="add-to-cart">Add To Cart</button>
+            </div>
+        </div>
+         <div class="card New">
+            <div class=""></div>
+            <img src="images/gym03.webp">
+            <div class="card-content">
+                <p class="title"> Beserk compressor with design</p>
+                <div>
+                    <span class="amount">₹399.00</span>
+                </div>
+                <button class="add-to-cart">Add To Cart</button>
+            </div>
+        </div>
+         <div class="card New">
+            <div class=""></div>
+            <img src="images/gym04.webp">
+            <div class="card-content">
+                <p class="title"> Beserk Compressor with shorts Beserk</p>
+                <div>
+                    <span class="amount">₹599.00</span>
+                </div>
+                <button class="add-to-cart">Add To Cart</button>
+            </div>
+        </div>
+         <div class="card New">
+            <div class="new"></div>
+            <img src="images/gym05.webp">
+            <div class="card-content">
+                <p class="title"> Beserk compressor red with beserk shorts </p>
+                <div>
+                    <span class="amount">₹599.00</span>
+                </div>
+                <button class="add-to-cart">Add To Cart</button>
+            </div>
+        </div>
+         <div class="card New">
+            <div class=""></div>
+            <img src="images/gym08.webp">
+            <div class="card-content">
+                <p class="title"> Demon Slayer Jacket Hoodie</p>
+                <div>
+                    <span class="amount">₹299.00</span>
+                </div>
+                <button class="add-to-cart">Add To Cart</button>
+            </div>
+        </div>
+         <div class="card New">
+            <div class="new"></div>
+            <img src="images/gym09.webp">
+            <div class="card-content">
+                <p class="title"> Gyumi Demon Slayer Hoodie</p>
+                <div>
+                    <span class="amount">₹299.00</span>
+                </div>
+                <button class="add-to-cart">Add To Cart</button>
+            </div>
+        </div>
+         <div class="card New">
+            <div class="new"></div>
+            <img src="images/gym12.webp">
+            <div class="card-content">
+                <p class="title"> Zoro Gym Baggy Pant</p>
+                <div>
+                    <span class="amount">₹199.00</span>
+                </div>
+                <button class="add-to-cart">Add To Cart</button>
+            </div>
+        </div>
+         <div class="card New">
+            <div class=""></div>
+            <img src="images/watch01.webp">
+            <div class="card-content">
+                <p class="title"> Gold Watch</p>
+                <div>
+                    <span class="amount">₹1000.00</span>
+                </div>
+                <button class="add-to-cart">Add To Cart</button>
+            </div>
+        </div>
+         <div class="card New">
+            <div class="new"></div>
+            <img src="images/watch02.webp">
+            <div class="card-content">
+                <p class="title"> Digital Watch</p>
+                <div>
+                    <span class="amount">₹350.00</span>
+                </div>
+                <button class="add-to-cart">Add To Cart</button>
+            </div>
+        </div>
+         <div class="card New">
+            <div class=""></div>
+            <img src="images/watch03.webp">
+            <div class="card-content">
+                <p class="title"> Men Digital Watch</p>
+                <div>
+                    <span class="amount">₹450.00</span>
+                </div>
+                <button class="add-to-cart">Add To Cart</button>
+            </div>
+        </div>
+         <div class="card New">
+            <div class=""></div>
+            <img src="images/shoes02.webp">
+            <div class="card-content">
+                <p class="title"> Snikkers</p>
+                <div>
+                    <span class="amount">₹399.00</span>
+                </div>
+                <button class="add-to-cart">Add To Cart</button>
+            </div>
+        </div>
+         <div class="card New">
+            <div class="new"></div>
+            <img src="images/shoes03.webp">
+            <div class="card-content">
+                <p class="title"> Nike J1 Shoes</p>
+                <div>
+                    <span class="amount">₹4599.00</span>
+                </div>
+                <button class="add-to-cart">Add To Cart</button>
+            </div>
+        </div>
+         <div class="card New">
+            <div class=""></div>
+            <img src="images/shoes04.webp">
+            <div class="card-content">
+                <p class="title"> Jordan N2 Shoes</p>
+                <div>
+                    <span class="amount">₹7599.00</span>
+                </div>
+                <button class="add-to-cart">Add To Cart</button>
+            </div>
+        </div>
+         <div class="card New">
+            <div class="new"></div>
+            <img src="images/shoes05.webp">
+            <div class="card-content">
+                <p class="title"> Cargo Style shoes</p>
+                <div>
+                    <span class="amount">₹999.00</span>
+                </div>
+                <button class="add-to-cart">Add To Cart</button>
+            </div>
+        </div>
+         <div class="card New">
+            <div class=""></div>
+            <img src="images/backpacks bag 02.webp">
+            <div class="card-content">
+                <p class="title"> Backpack</p>
+                <div>
+                    <span class="amount">₹559.00</span>
+                </div>
+                <button class="add-to-cart">Add To Cart</button>
+            </div>
+        </div>
+         <div class="card New">
+            <div class="new"></div>
+            <img src="images/perfume01.webp">
+            <div class="card-content">
+                <p class="title"> Belavita Perfume For Women</p>
+                <div>
+                    <span class="amount">₹200.00</span>
+                </div>
+                <button class="add-to-cart">Add To Cart</button>
+            </div>
+        </div>
+         <div class="card New">
+            <div class=""></div>
+            <img src="images/perfume02.webp">
+            <div class="card-content">
+                <p class="title"> Forever Oscar</p>
+                <div>
+                    <span class="amount">₹500.00</span>
+                </div>
+                <button class="add-to-cart">Add To Cart</button>
+            </div>
+        </div>
+         <div class="card New">
+            <div class="new"></div>
+            <img src="images/perfume03.webp">
+            <div class="card-content">
+                <p class="title"> Beardo Perfume</p>
+                <div>
+                    <span class="amount">₹300.00</span>
+                </div>
+                <button class="add-to-cart">Add To Cart</button>
+            </div>
+        </div>
+        <div class="card New">
+            <div class=""></div>
+            <img src="images/perfume04.webp">
+            <div class="card-content">
+                <p class="title"> PARADISE Perfume</p>
+                <div>
+                    <span class="amount">₹250.00</span>
+                </div>
+                <button class="add-to-cart">Add To Cart</button>
+            </div>
+        </div>
+        <div class="card New">
+            <div class="new"></div>
+            <img src="images/perfume05.webp">
+            <div class="card-content">
+                <p class="title"> BELLAVITA Combo</p>
+                <div>
+                    <span class="amount">₹150.00</span>
+                </div>
+                <button class="add-to-cart">Add To Cart</button>
+            </div>
+        </div>
+        <div class="card New">
+            <div class=""></div>
+            <img src="images/Golden watch.webp">
+            <div class="card-content">
+                <p class="title"> Luxury Formal Watch</p>
+                <div>
+                    <span class="amount">₹1000.00</span>
+                </div>
+                <button class="add-to-cart">Add To Cart</button>
+            </div>
+        </div>
+        <div class="card New">
+            <div class=""></div>
+            <img src="images/fosiile gold.webp">
+            <div class="card-content">
+                <p class="title"> fossile Formal Golden</p>
+                <div>
+                    <span class="amount">₹200.00</span>
+                </div>
+                <button class="add-to-cart">Add To Cart</button>
+            </div>
+        </div>
+        <div class="card New">
+            <div class="new"></div>
+            <img src="images/fossile.webp">
+            <div class="card-content">
+                <p class="title"> Cassual Gold</p>
+                <div>
+                    <span class="amount">₹150.00</span>
+                </div>
+                <button class="add-to-cart">Add To Cart</button>
+            </div>
+        </div>
+        <div class="card New">
+            <div class=""></div>
+            <img src="images/flipflop.webp">
+            <div class="card-content">
+                <p class="title"> FlipFlop</p>
+                <div>
+                    <span class="amount">₹100.00</span>
+                </div>
+                <button class="add-to-cart">Add To Cart</button>
+            </div>
+
+           </div>
+           <div class="card New">
+            <div class="new"></div>
+            <img src="images/jacket01.webp">
+            <div class="card-content">
+                <p class="title"> Rock Jacket</p>
+                <div>
+                    <span class="amount">₹700.00</span>
+                </div>
+                <button class="add-to-cart">Add To Cart</button>
+            </div>
+        </div>
+        <div class="card New">
+            <div class=""></div>
+            <img src="images/riding glove.webp">
+            <div class="card-content">
+                <p class="title"> Riding Glove</p>
+                <div>
+                    <span class="amount">₹25.00</span>
+                </div>
+                <button class="add-to-cart">Add To Cart</button>
+            </div>
+        </div>
+        <div class="card New">
+            <div class="new"></div>
+            <img src="images/earbuds.jpeg">
+            <div class="card-content">
+                <p class="title"> Earbuds</p>
+                <div>
+                    <span class="amount">₹99.00</span>
+                </div>
+                <button class="add-to-cart">Add To Cart</button>
+            </div>
+        </div>
+         <div class="card New">
+            <div class=""></div>
+            <img src="images/jacket04.webp">
+            <div class="card-content">
+                <p class="title"> RockRed Jacket</p>
+                <div>
+                    <span class="amount">₹700.00</span>
+                </div>
+                <button class="add-to-cart">Add To Cart</button>
+            </div>
+        </div>
+         <div class="card New">
+            <div class=""></div>
+            <img src="images/jacket03.webp">
+            <div class="card-content">
+                <p class="title"> FormulaRock Jacket</p>
+                <div>
+                    <span class="amount">₹500.00</span>
+                </div>
+                <button class="add-to-cart">Add To Cart</button>
+            </div>
+        </div>
+        <div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/iphone01.webp">
+    <div class="card-content">
+        <p class="title">Apple iPhone 16 (128GB)</p>
+        <div>
+            <span class="amount">₹89,999 <del>₹99,900</del> (10% off)</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/iphone02.webp">
+    <div class="card-content">
+        <p class="title">Apple iPhone 14 (128GB)</p>
+        <div>
+            <span class="amount">₹19,999 <del>₹49,900</del> (60% off)</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/iphone03.webp">
+    <div class="card-content">
+        <p class="title">Apple iPhone 17 Pro Max</p>
+        <div>
+            <span class="amount">₹1,59,999 <del>₹1,79,900</del> (11% off)</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/nothing02.webp">
+    <div class="card-content">
+        <p class="title">Nothing Phone (2) 5G</p>
+        <div>
+            <span class="amount">₹59,999 <del>₹69,999</del> (14% off)</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/wallet01.webp">
+    <div class="card-content">
+        <p class="title">Men's Leather Wallet Classic</p>
+        <div>
+            <span class="amount">₹449 <del>₹999</del> </span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/wallet02.webp">
+    <div class="card-content">
+        <p class="title">Premium Leather Wallet Brown</p>
+        <div>
+            <span class="amount">₹559 <del>₹1,299</del></span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/wallet03.webp">
+    <div class="card-content">
+        <p class="title">Stylish Slim Wallet for Men</p>
+        <div>
+            <span class="amount">₹999 <del>₹1,999</del></span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+       <div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/trimmer01.webp">
+    <div class="card-content">
+        <p class="title">Professional Hair & Beard Trimmer</p>
+        <div>
+            <span class="amount">₹459 <del>₹999</del></span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/trimmer02.webp">
+    <div class="card-content">
+        <p class="title">Cordless Home Use Beard Trimmer</p>
+        <div>
+            <span class="amount">₹699 <del>₹1,499</del></span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+       <div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/trimmer03.webp">
+    <div class="card-content">
+        <p class="title">Professional Hair & Beard Trimmer</p>
+        <div>
+            <span class="amount">₹1,299</span>
+            <span style="text-decoration: line-through; color: gray;">₹2,499</span>
+            <span style="color:red;"> (48% off)</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/skincare01.webp">
+    <div class="card-content">
+        <p class="title">Vitamin C Face Serum for Glowing Skin</p>
+        <div>
+            <span class="amount">₹299</span>
+            <span style="text-decoration: line-through; color: gray;">₹599</span>
+            <span style="color:red;"> (50% off)</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/skincare02.webp">
+    <div class="card-content">
+        <p class="title">Hydrating Face Moisturizer Cream</p>
+        <div>
+            <span class="amount">₹349</span>
+            <span style="text-decoration: line-through; color: gray;">₹699</span>
+            <span style="color:red;"> (50% off)</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+        <div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/skincare03.webp">
+    <div class="card-content">
+        <p class="title">Aloe Vera Gel for Skin & Hair</p>
+        <div>
+            <span class="amount">₹199</span>
+            <span style="text-decoration: line-through; color: gray;">₹399</span>
+            <span style="color:red;"> (50% off)</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/skincare04.webp">
+    <div class="card-content">
+        <p class="title">Sunscreen SPF 50+ for Daily Protection</p>
+        <div>
+            <span class="amount">₹249</span>
+            <span style="text-decoration: line-through; color: gray;">₹499</span>
+            <span style="color:red;"> (50% off)</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/samsung01.webp">
+    <div class="card-content">
+        <p class="title">Samsung Galaxy S23 5G</p>
+        <div>
+            <span class="amount">₹69,999</span>
+            <span style="text-decoration: line-through; color: gray;">₹89,999</span>
+            <span style="color:red;"> (22% off)</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/samsung02.webp">
+    <div class="card-content">
+        <p class="title">Samsung Galaxy A54 5G</p>
+        <div>
+            <span class="amount">₹39,999</span>
+            <span style="text-decoration: line-through; color: gray;">₹49,999</span>
+            <span style="color:red;"> (20% off)</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/jwellary01.webp">
+    <div class="card-content">
+        <p class="title">Gold Plated Necklace Set for Women</p>
+        <div>
+            <span class="amount">₹799</span>
+            <span style="text-decoration: line-through; color: gray;">₹1,999</span>
+            <span style="color:red;"> (60% off)</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/jwellary02.webp">
+    <div class="card-content">
+        <p class="title">Designer Earrings for Women</p>
+        <div>
+            <span class="amount">₹499</span>
+            <span style="text-decoration: line-through; color: gray;">₹1,299</span>
+            <span style="color:red;"> (62% off)</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/google01.webp">
+    <div class="card-content">
+        <p class="title">Pixel Pro Max</p>
+        <div>
+            <span class="amount">₹129,199</span>
+            <span style="text-decoration: line-through; color: gray;">₹159,499</span>
+            <span style="color:red;"> (10% off)</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+      <div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/con02.webp">
+    <div class="card-content">
+        <p class="title">Men Protection</p>
+        <div>
+            <span class="amount">₹1,399</span>
+            <span style="text-decoration: line-through; color: gray;">₹2,799</span>
+            <span style="color:red;"> (50% off)</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/book 01.webp">
+    <div class="card-content">
+        <p class="title">Rich Dad Poor Dad - Financial Book</p>
+        <div>
+            <span class="amount">₹299</span>
+            <span style="text-decoration: line-through; color: gray;">₹599</span>
+            <span style="color:red;"> (50% off)</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/book 02.webp">
+    <div class="card-content">
+        <p class="title">Atomic Habits - Self Improvement Book</p>
+        <div>
+            <span class="amount">₹349</span>
+            <span style="text-decoration: line-through; color: gray;">₹699</span>
+            <span style="color:red;"> (50% off)</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/book 03.webp">
+    <div class="card-content">
+        <p class="title">The Psychology of Money</p>
+        <div>
+            <span class="amount">₹399</span>
+            <span style="text-decoration: line-through; color: gray;">₹799</span>
+            <span style="color:red;"> (50% off)</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/book 04.webp">
+    <div class="card-content">
+        <p class="title">Think and Grow Rich</p>
+        <div>
+            <span class="amount">₹249</span>
+            <span style="text-decoration: line-through; color: gray;">₹499</span>
+            <span style="color:red;"> (50% off)</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/book 05.webp">
+    <div class="card-content">
+        <p class="title">Ikigai - Japanese Secret to Long Life</p>
+        <div>
+            <span class="amount">₹299</span>
+            <span style="text-decoration: line-through; color: gray;">₹599</span>
+            <span style="color:red;"> (50% off)</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/book 05.webp">
+    <div class="card-content">
+        <p class="title">Ikigai - Special Edition</p>
+        <div>
+            <span class="amount">₹349</span>
+            <span style="text-decoration: line-through; color: gray;">₹699</span>
+            <span style="color:red;"> (50% off)</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/book 06.webp">
+    <div class="card-content">
+        <p class="title">Do Epic Shit - Motivational Book</p>
+        <div>
+            <span class="amount">₹199</span>
+            <span style="text-decoration: line-through; color: gray;">₹399</span>
+            <span style="color:red;"> (50% off)</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/book 07.webp">
+    <div class="card-content">
+        <p class="title">Deep Work - Focus & Productivity</p>
+        <div>
+            <span class="amount">₹329</span>
+            <span style="text-decoration: line-through; color: gray;">₹659</span>
+            <span style="color:red;"> (50% off)</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/book 08.webp">
+    <div class="card-content">
+        <p class="title">Start With Why - Leadership Book</p>
+        <div>
+            <span class="amount">₹299</span>
+            <span style="text-decoration: line-through; color: gray;">₹599</span>
+            <span style="color:red;"> (50% off)</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/book 09.webp">
+    <div class="card-content">
+        <p class="title">The Alchemist - Paulo Coelho</p>
+        <div>
+            <span class="amount">₹249</span>
+            <span style="text-decoration: line-through; color: gray;">₹499</span>
+            <span style="color:red;"> (50% off)</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/book 10.webp">
+    <div class="card-content">
+        <p class="title">Can't Hurt Me - David Goggins</p>
+        <div>
+            <span class="amount">₹399</span>
+            <span style="text-decoration: line-through; color: gray;">₹799</span>
+            <span style="color:red;"> (50% off)</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+       <div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/ear01.webp">
+    <div class="card-content">
+        <p class="title">Wireless Earbuds Pro</p>
+        <div>
+            <span class="amount">₹1,499.00</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/ear02.webp">
+    <div class="card-content">
+        <p class="title">Bluetooth Earbuds X2</p>
+        <div>
+            <span class="amount">₹1,299.00</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/ear03.webp">
+    <div class="card-content">
+        <p class="title">Noise Cancel Earbuds</p>
+        <div>
+            <span class="amount">₹1,899.00</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/ear04.webp">
+    <div class="card-content">
+        <p class="title">Gaming Earbuds RGB</p>
+        <div>
+            <span class="amount">₹2,099.00</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/ear05.webp">
+    <div class="card-content">
+        <p class="title">Mini Wireless Earbuds</p>
+        <div>
+            <span class="amount">₹999.00</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/ear06.webp">
+    <div class="card-content">
+        <p class="title">Smart Touch Earbuds</p>
+        <div>
+            <span class="amount">₹1,399.00</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/ear07.webp">
+    <div class="card-content">
+        <p class="title">Bass Boost Earbuds</p>
+        <div>
+            <span class="amount">₹1,799.00</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/ear08.webp">
+    <div class="card-content">
+        <p class="title">Premium Sound Earbuds</p>
+        <div>
+            <span class="amount">₹2,299.00</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/ear09.webp">
+    <div class="card-content">
+        <p class="title">Ultra Fit Earbuds</p>
+        <div>
+            <span class="amount">₹1,199.00</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/ear10.webp">
+    <div class="card-content">
+        <p class="title">Sport Wireless Earbuds</p>
+        <div>
+            <span class="amount">₹1,599.00</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+         <div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/dress01.webp">
+    <div class="card-content">
+        <p class="title">Floral Summer Dress</p>
+        <div>
+            <span class="amount">₹1,299.00</span>
+            <span class="discount">30% OFF</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/dress02.webp">
+    <div class="card-content">
+        <p class="title">Casual Midi Dress</p>
+        <div>
+            <span class="amount">₹1,099.00</span>
+            <span class="discount">25% OFF</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/dress03.webp">
+    <div class="card-content">
+        <p class="title">Party Wear Dress</p>
+        <div>
+            <span class="amount">₹1,799.00</span>
+            <span class="discount">35% OFF</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/dress04.webp">
+    <div class="card-content">
+        <p class="title">Elegant Maxi Dress</p>
+        <div>
+            <span class="amount">₹2,099.00</span>
+            <span class="discount">40% OFF</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/dress05.webp">
+    <div class="card-content">
+        <p class="title">Printed Cotton Dress</p>
+        <div>
+            <span class="amount">₹999.00</span>
+            <span class="discount">20% OFF</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/dress06.webp">
+    <div class="card-content">
+        <p class="title">Designer Evening Dress</p>
+        <div>
+            <span class="amount">₹2,499.00</span>
+            <span class="discount">45% OFF</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<!-- SHIRTS -->
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/shirt01.webp">
+    <div class="card-content">
+        <p class="title">Men Casual Shirt</p>
+        <div>
+            <span class="amount">₹799.00</span>
+            <span class="discount">20% OFF</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/shirt02.webp">
+    <div class="card-content">
+        <p class="title">Slim Fit Shirt</p>
+        <div>
+            <span class="amount">₹999.00</span>
+            <span class="discount">30% OFF</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/shirt03.webp">
+    <div class="card-content">
+        <p class="title">Formal Office Shirt</p>
+        <div>
+            <span class="amount">₹1,199.00</span>
+            <span class="discount">25% OFF</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/shirt05.webp">
+    <div class="card-content">
+        <p class="title">Checked Casual Shirt</p>
+        <div>
+            <span class="amount">₹899.00</span>
+            <span class="discount">15% OFF</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/shirt06.webp">
+    <div class="card-content">
+        <p class="title">Denim Style Shirt</p>
+        <div>
+            <span class="amount">₹1,299.00</span>
+            <span class="discount">35% OFF</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<!-- GLASSES -->
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/glas01.webp">
+    <div class="card-content">
+        <p class="title">Classic Sunglasses</p>
+        <div>
+            <span class="amount">₹599.00</span>
+            <span class="discount">20% OFF</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/glass022.webp">
+    <div class="card-content">
+        <p class="title">Stylish UV Glasses</p>
+        <div>
+            <span class="amount">₹699.00</span>
+            <span class="discount">25% OFF</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/glass03.webp">
+    <div class="card-content">
+        <p class="title">Retro Frame Glasses</p>
+        <div>
+            <span class="amount">₹799.00</span>
+            <span class="discount">30% OFF</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/glass04.webp">
+    <div class="card-content">
+        <p class="title">Luxury Sunglasses</p>
+        <div>
+            <span class="amount">₹1,299.00</span>
+            <span class="discount">40% OFF</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/glass05.webp">
+    <div class="card-content">
+        <p class="title">Sporty Sunglasses</p>
+        <div>
+            <span class="amount">₹899.00</span>
+            <span class="discount">20% OFF</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/glass06.webp">
+    <div class="card-content">
+        <p class="title">Premium UV Glasses</p>
+        <div>
+            <span class="amount">₹999.00</span>
+            <span class="discount">35% OFF</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/glass07.webp">
+    <div class="card-content">
+        <p class="title">Modern Stylish Glasses</p>
+        <div>
+            <span class="amount">₹749.00</span>
+            <span class="discount">25% OFF</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+        <div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/glass08.webp">
+    <div class="card-content">
+        <p class="title">Premium Black Sunglasses</p>
+        <div>
+            <span class="amount">₹899.00</span>
+            <span class="discount">25% OFF</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/glass09.webp">
+    <div class="card-content">
+        <p class="title">Trendy Fashion Glasses</p>
+        <div>
+            <span class="amount">₹799.00</span>
+            <span class="discount">20% OFF</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<!-- HOME PRODUCTS -->
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/home01.webp">
+    <div class="card-content">
+        <p class="title">Decorative Wall Lamp</p>
+        <div>
+            <span class="amount">₹1,499.00</span>
+            <span class="discount">35% OFF</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/home02.webp">
+    <div class="card-content">
+        <p class="title">Modern Table Lamp</p>
+        <div>
+            <span class="amount">₹1,199.00</span>
+            <span class="discount">30% OFF</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/home03.webp">
+    <div class="card-content">
+        <p class="title">Stylish Wall Clock</p>
+        <div>
+            <span class="amount">₹999.00</span>
+            <span class="discount">25% OFF</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/home04.webp">
+    <div class="card-content">
+        <p class="title">Home Decor Vase</p>
+        <div>
+            <span class="amount">₹699.00</span>
+            <span class="discount">20% OFF</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/home05.webp">
+    <div class="card-content">
+        <p class="title">LED Decorative Lights</p>
+        <div>
+            <span class="amount">₹1,299.00</span>
+            <span class="discount">40% OFF</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/home06.webp">
+    <div class="card-content">
+        <p class="title">Minimal Desk Lamp</p>
+        <div>
+            <span class="amount">₹899.00</span>
+            <span class="discount">25% OFF</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/home08.webp">
+    <div class="card-content">
+        <p class="title">Luxury Wall Decor</p>
+        <div>
+            <span class="amount">₹1,799.00</span>
+            <span class="discount">45% OFF</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/home08.webp">
+    <div class="card-content">
+        <p class="title">Premium Art Frame</p>
+        <div>
+            <span class="amount">₹1,599.00</span>
+            <span class="discount">35% OFF</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/home10.webp">
+    <div class="card-content">
+        <p class="title">Modern Interior Decor</p>
+        <div>
+            <span class="amount">₹2,199.00</span>
+            <span class="discount">50% OFF</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<!-- INSTAGRAM / TREND -->
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/ins01.webp">
+    <div class="card-content">
+        <p class="title">Trendy Outfit Combo</p>
+        <div>
+            <span class="amount">₹1,499.00</span>
+            <span class="discount">30% OFF</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/ins02.webp">
+    <div class="card-content">
+        <p class="title">Fashion Street Style</p>
+        <div>
+            <span class="amount">₹1,299.00</span>
+            <span class="discount">25% OFF</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/ins03.webp">
+    <div class="card-content">
+        <p class="title">Casual Wear Set</p>
+        <div>
+            <span class="amount">₹1,099.00</span>
+            <span class="discount">20% OFF</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/ins04.webp">
+    <div class="card-content">
+        <p class="title">Designer Trend Outfit</p>
+        <div>
+            <span class="amount">₹1,899.00</span>
+            <span class="discount">40% OFF</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/ins05.webp">
+    <div class="card-content">
+        <p class="title">Modern Casual Look</p>
+        <div>
+            <span class="amount">₹1,199.00</span>
+            <span class="discount">30% OFF</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<!-- CREATIVE -->
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/crea01.webp">
+    <div class="card-content">
+        <p class="title">Creative Wall Art</p>
+        <div>
+            <span class="amount">₹799.00</span>
+            <span class="discount">25% OFF</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/crea02.webp">
+    <div class="card-content">
+        <p class="title">Abstract Art Frame</p>
+        <div>
+            <span class="amount">₹999.00</span>
+            <span class="discount">30% OFF</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/crea03.webp">
+    <div class="card-content">
+        <p class="title">Minimal Canvas Art</p>
+        <div>
+            <span class="amount">₹1,099.00</span>
+            <span class="discount">35% OFF</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/crea04.webp">
+    <div class="card-content">
+        <p class="title">Luxury Wall Painting</p>
+        <div>
+            <span class="amount">₹1,499.00</span>
+            <span class="discount">40% OFF</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/crea05.webp">
+    <div class="card-content">
+        <p class="title">Modern Artistic Frame</p>
+        <div>
+            <span class="amount">₹1,299.00</span>
+            <span class="discount">30% OFF</span>
+        </div>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+        <div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/crea06.webp">
+    <div class="card-content">
+        <p class="title">Premium Canvas Art</p>
+        <div>
+            <span class="amount">₹1,199.00</span>
+            <span class="discount">30% OFF</span>
+        </div>
+        <p class="rating">⭐ 4.5</p>
+        <span class="badge">NEW</span>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/crea06.webp">
+    <div class="card-content">
+        <p class="title">Abstract Modern Art</p>
+        <div>
+            <span class="amount">₹1,099.00</span>
+            <span class="discount">25% OFF</span>
+        </div>
+        <p class="rating">⭐ 4.3</p>
+        <span class="badge">HOT</span>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/crea07.webp">
+    <div class="card-content">
+        <p class="title">Minimal Wall Frame</p>
+        <div>
+            <span class="amount">₹899.00</span>
+            <span class="discount">20% OFF</span>
+        </div>
+        <p class="rating">⭐ 4.2</p>
+        <span class="badge">NEW</span>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/crea08.webp">
+    <div class="card-content">
+        <p class="title">Luxury Painting Decor</p>
+        <div>
+            <span class="amount">₹1,799.00</span>
+            <span class="discount">40% OFF</span>
+        </div>
+        <p class="rating">⭐ 4.7</p>
+        <span class="badge">TRENDING</span>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/crea09.webp">
+    <div class="card-content">
+        <p class="title">Modern Art Frame</p>
+        <div>
+            <span class="amount">₹1,299.00</span>
+            <span class="discount">35% OFF</span>
+        </div>
+        <p class="rating">⭐ 4.4</p>
+        <span class="badge">SALE</span>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+
+<div class="card New">
+    <div class=""></div>
+    <img src="images/ImagesAdv/crea10.webp">
+    <div class="card-content">
+        <p class="title">Designer Wall Artwork</p>
+        <div>
+            <span class="amount">₹1,499.00</span>
+            <span class="discount">30% OFF</span>
+        </div>
+        <p class="rating">⭐ 4.6</p>
+        <span class="badge">HOT</span>
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+</div>
+        
+         </div>
+        </div>
+    </section>
+
+    <footer class="section">
+        <div class="footer-container container flex wrap">
+            <div class="footer-bottom">
+                <p>Copyright &copy;2025 <a href="#">MegaMart.</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
+

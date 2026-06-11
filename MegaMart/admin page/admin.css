@@ -1,0 +1,284 @@
+/* ================= GLOBAL RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+/* ================= BACKGROUND ================= */
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Purple Gradient Background */
+    background: linear-gradient(135deg, #7b5cff, #a855f7);
+    animation: bgFade 1.2s ease;
+}
+
+@keyframes bgFade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* ================= MAIN WRAPPER (The Card) ================= */
+.admin-wrapper {
+    width: 950px;
+    height: 600px; /* Fixed height for the "App" feel */
+    background: #fff;
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden; /* Keeps rounded corners clean */
+    box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+    animation: cardPop 0.9s ease;
+}
+
+@keyframes cardPop {
+    from {
+        opacity: 0;
+        transform: scale(0.92) translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* ================= LEFT PANEL (Design Side) ================= */
+.admin-left {
+    width: 35%; /* Sidebar takes 35% width */
+    background: linear-gradient(135deg, #7b5cff, #a855f7);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Floating White Circle Decoration */
+.admin-left .shape {
+    position: absolute;
+    width: 200%;
+    height: 100%;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    right: -100%;
+    top: -30%;
+    animation: floatShape 6s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes floatShape {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Logout Button styling */
+.admin-left button {
+    position: relative;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+    transition: 0.3s;
+}
+
+.admin-left button:hover {
+    background: white;
+    color: #7b5cff;
+}
+
+/* ================= RIGHT PANEL (Form Side) ================= */
+.admin-right {
+    width: 65%; /* Content takes 65% width */
+    padding: 40px;
+    background: #fff;
+    
+    /* 🔥 SCROLLING FIX IS HERE */
+    height: 100%;       /* Fill the container height */
+    overflow-y: auto;   /* Enable vertical scrolling */
+    
+    display: flex;
+    flex-direction: column;
+}
+
+/* Custom Scrollbar */
+.admin-right::-webkit-scrollbar {
+    width: 8px;
+}
+.admin-right::-webkit-scrollbar-track {
+    background: #f4f4f4;
+}
+.admin-right::-webkit-scrollbar-thumb {
+    background: #d4caff;
+    border-radius: 4px;
+}
+.admin-right::-webkit-scrollbar-thumb:hover {
+    background: #7b5cff;
+}
+
+/* Headings */
+.admin-right h2 {
+    color: #7b5cff;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.typewriter {
+    font-size: 14px;
+    color: #888;
+    font-weight: 500;
+    margin-bottom: 25px;
+    display: inline-block;
+    border-bottom: 2px solid #7b5cff;
+    padding-bottom: 2px;
+}
+
+/* ================= INPUTS & FORM ================= */
+.admin-right input,
+.admin-right textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+    background: #f9f9f9;
+}
+
+.admin-right input:focus,
+.admin-right textarea:focus {
+    border-color: #7b5cff;
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(123, 92, 255, 0.1);
+}
+
+.admin-right textarea {
+    resize: none;
+    height: 80px;
+}
+
+/* File Input Styling */
+input[type="file"] {
+    padding: 10px;
+    background: #fff;
+}
+
+/* Main Action Button */
+.admin-right button[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #7b5cff, #a855f7);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(123, 92, 255, 0.3);
+    transition: 0.3s;
+    margin-bottom: 30px;
+}
+
+.admin-right button[type="submit"]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(123, 92, 255, 0.4);
+}
+
+/* ================= PRODUCT LIST (Manage Products) ================= */
+#adminProductList {
+    margin-top: 20px;
+}
+
+.product-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: 0.2s;
+}
+
+.product-item:hover {
+    border-color: #7b5cff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.product-item img {
+    width: 45px;
+    height: 45px;
+    border-radius: 6px;
+    object-fit: cover;
+    margin-right: 15px;
+    border: 1px solid #eee;
+}
+
+.product-info strong {
+    font-size: 14px;
+    color: #333;
+    display: block;
+}
+
+.product-info small {
+    font-size: 12px;
+    color: #888;
+}
+
+.delete-btn {
+    background: #ffe5e5 !important; /* Light red bg */
+    color: #ff4d4d !important;      /* Red text */
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+    width: auto !important; /* Override global button width */
+    margin: 0 !important;
+}
+
+.delete-btn:hover {
+    background: #ff4d4d !important;
+    color: white !important;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+    .admin-wrapper {
+        width: 95%;
+        height: 90vh; /* Taller on tablets */
+        flex-direction: column;
+    }
+
+    .admin-left {
+        width: 100%;
+        height: 80px;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+
+    .admin-left button {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+
+    .admin-right {
+        width: 100%;
+        height: calc(100% - 80px); /* Fill remaining space */
+    }
+}

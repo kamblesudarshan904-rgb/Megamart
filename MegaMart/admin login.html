@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+<div class="auth-container">
+  <div class="card active">
+    <div class="card-top"></div>
+
+    <div class="card-body">
+      <h2>ADMIN LOGIN</h2>
+
+      <div class="input-box">
+        <i class="fa fa-user-shield"></i>
+        <input type="text" id="admin-id" placeholder="Admin ID">
+      </div>
+
+      <div class="input-box">
+        <i class="fa fa-lock"></i>
+        <input type="password" id="admin-pass" placeholder="Admin Password">
+      </div>
+
+      <button class="btn" onclick="authAdmin()">LOGIN</button>
+
+      <p class="switch-text">
+        <span onclick="window.location.href='login.html'">← Back to User Login</span>
+      </p>
+    </div>
+  </div>
+</div>
+
+<script>
+    function authAdmin() {
+        const idInput = document.getElementById("admin-id").value;
+        const passInput = document.getElementById("admin-pass").value;
+
+        // Credentials
+        const correctId = "sudarshan";
+        const correctPass = "123";
+
+        if (idInput === correctId && passInput === correctPass) {
+            // 1. SET THE SECRET FLAG
+            localStorage.setItem("adminLogged", "true");
+            
+            alert("Login Successful!");
+            // Redirect to admin page
+            window.location.href = "admin page/admin.html"; 
+        } else {
+            alert("Invalid Admin ID or Password!");
+        }
+    }
+</script>
+
+</body>
+</html>
