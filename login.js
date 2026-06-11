@@ -52,8 +52,28 @@ document.getElementById("signupBtn").addEventListener("click", () => {
         }
     })
     .catch(err => {
-        console.error("❌ Signup Error:", err);
-        alert("Signup failed (Check console)");
+        console.error("❌ Signup Error (trying LocalStorage fallback):", err);
+        
+        try {
+            let localUsers = JSON.parse(localStorage.getItem("local_users")) || [];
+            
+            // Check if username already exists
+            const userExists = localUsers.some(u => u.username === username);
+            if (userExists) {
+                alert("Username already taken (Local Database)");
+                return;
+            }
+            
+            // Save user
+            localUsers.push({ fullName, username, email, mobile, password });
+            localStorage.setItem("local_users", JSON.stringify(localUsers));
+            
+            alert("Registration Successful (Local Database Fallback)! Please Login.");
+            showLogin();
+        } catch (localErr) {
+            console.error("❌ LocalStorage Error:", localErr);
+            alert("Signup failed (Check console)");
+        }
     });
 });
 
@@ -95,7 +115,38 @@ document.getElementById("loginBtn").addEventListener("click", () => {
         }
     })
     .catch(err => {
-        console.error("❌ Login Error:", err);
-        alert("Login failed (Check console)");
+        console.error("❌ Login Error (trying LocalStorage fallback):", err);
+        
+        try {
+            // Support default test account for live demo
+            if (username === "ss" && password === "123") {
+                alert("Login Successful (Local Database Fallback)! Welcome ss");
+                localStorage.setItem("userLogged", "true");
+                localStorage.setItem("username", "ss");
+                localStorage.setItem("fullName", "ss");
+                window.location.href = "index.html";
+                return;
+            }
+
+            let localUsers = JSON.parse(localStorage.getItem("local_users")) || [];
+            
+            // Find user
+            const user = localUsers.find(u => u.username === username && u.password === password);
+            
+            if (user) {
+                alert("Login Successful (Local Database Fallback)! Welcome " + user.fullName);
+                
+                localStorage.setItem("userLogged", "true");
+                localStorage.setItem("username", username);
+                localStorage.setItem("fullName", user.fullName);
+                
+                window.location.href = "index.html";
+            } else {
+                alert("Invalid Username or Password (Local Database)");
+            }
+        } catch (localErr) {
+            console.error("❌ LocalStorage Error:", localErr);
+            alert("Login failed (Check console)");
+        }
     });
 });
